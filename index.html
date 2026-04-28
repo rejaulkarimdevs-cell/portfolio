@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejaul Karim — Shopify Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header>
+      <nav>
+        <div class="nav-inner">
+          <a class="nav-logo" href="#hero">RK<span>.</span></a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div style="display: flex; align-items: center; gap: 12px">
+            <a class="nav-cta desktop-only" href="#contact">Hire Me</a>
+            <button class="nav-hamburger" id="menuBtn" aria-label="Open menu">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- MOBILE DRAWER -->
+      <div class="drawer-overlay" id="drawerOverlay"></div>
+      <div class="drawer" id="drawer">
+        <div class="drawer-header">
+          <a class="nav-logo" href="#hero">RK<span>.</span></a>
+          <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path d="M18 6L6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <ul class="drawer-nav">
+          <li><a href="#about" class="drawer-link">About</a></li>
+          <li><a href="#skills" class="drawer-link">Skills</a></li>
+          <li><a href="#projects" class="drawer-link">Projects</a></li>
+          <li><a href="#services" class="drawer-link">Services</a></li>
+          <li><a href="#testimonials" class="drawer-link">Testimonials</a></li>
+          <li><a href="#contact" class="drawer-link">Contact</a></li>
+        </ul>
+        <div class="drawer-footer">
+          <a class="btn-primary drawer-link" href="#contact">Hire Me →</a>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <section id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-badge fade-up fade-up-1">
+                <span class="hero-badge-dot"></span>
+                Available for new projects
+              </div>
+              <h1 class="hero-name fade-up fade-up-2">
+                Rejaul<br /><em>Karim</em>
+              </h1>
+              <p class="hero-desc fade-up fade-up-3">
+                Shopify Expert focused on performance and conversions. From
+                theme customization to advanced Liquid coding, I build fast,
+                scalable stores that turn visitors into customers.
+              </p>
+              <div class="hero-actions fade-up fade-up-4">
+                <a class="btn-primary" href="#contact"
+                  >Hire Me
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+                <a class="btn-secondary" href="#projects">View Work</a>
+              </div>
+              <div class="hero-stats fade-up fade-up-4">
+                <div>
+                  <div class="stat-num">2.5<span>+</span></div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+
+                <div>
+                  <div class="stat-num">98<span>%</span></div>
+                  <div class="stat-label">Client Satisfaction</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-image-wrap" style="position: relative">
+              <div class="hero-img-card">
+                <img
+                  src="/assets/images/profile.png"
+                  alt="Shopify store development"
+                />
+              </div>
+              <div class="hero-float-badge top">
+                <div class="hfb-icon">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="hfb-text">Speed Optimized</div>
+                  <div class="hfb-sub">Core Web Vitals ✓</div>
+                </div>
+              </div>
+              <div class="hero-float-badge bottom">
+                <div class="hfb-icon">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="hfb-text">+40% Conversion</div>
+                  <div class="hfb-sub">Average client result</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-img">
+              <img src="assets/images/me.png" alt="Developer workspace" />
+            </div>
+            <div class="about-text">
+              <div class="section-tag">About Me</div>
+              <h2 class="section-title">
+                Turning Shopify stores into revenue machines
+              </h2>
+              <p>
+                I'm Rejaul Karim, a dedicated Shopify developer with deep
+                expertise in building high-performance ecommerce experiences. I
+                combine technical skill with a sharp eye for conversion
+                optimization to deliver stores that don't just look great — they
+                perform.
+              </p>
+              <p>
+                My approach is always performance-first. Whether I'm coding a
+                custom Liquid section, integrating a complex app, or migrating
+                from another platform, I focus on load speed, UX clarity, and
+                measurable business outcomes.
+              </p>
+              <div class="about-highlights">
+                <div class="highlight-item">Shopify Liquid Expert</div>
+                <div class="highlight-item">Headless / Hydrogen</div>
+                <div class="highlight-item">Theme Development</div>
+                <div class="highlight-item">Speed Optimization</div>
+                <div class="highlight-item">CRO Specialist</div>
+                <div class="highlight-item">App Integration</div>
+                <div class="highlight-item">Platform Migration</div>
+                <div class="highlight-item">Custom Features</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills">
+        <div class="container">
+          <div class="skills-header">
+            <div>
+              <div class="section-tag">Tech Stack</div>
+              <h2 class="section-title">Tools &amp; Technologies</h2>
+            </div>
+            <p class="section-sub" style="max-width: 360px">
+              Everything I use to build blazing-fast, conversion-focused Shopify
+              stores.
+            </p>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">🛍️</div>
+              <div class="skill-name">Shopify / Plus</div>
+              <div class="skill-desc">
+                Theme OS 2.0, sections everywhere, metafields, multi-currency
+                &amp; markets.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">💧</div>
+              <div class="skill-name">Liquid</div>
+              <div class="skill-desc">
+                Advanced templating, custom section schemas, snippets, blocks
+                &amp; filters.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">⚛️</div>
+              <div class="skill-name">Hydrogen / Remix</div>
+              <div class="skill-desc">
+                Headless Shopify storefronts with React, Storefront API &amp;
+                streaming SSR.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">⚡</div>
+              <div class="skill-name">JavaScript / React</div>
+              <div class="skill-desc">
+                Custom JS components, dynamic cart UX, AJAX APIs &amp;
+                interactive UI.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🎨</div>
+              <div class="skill-name">CSS / Tailwind</div>
+              <div class="skill-desc">
+                Pixel-perfect responsive layouts, animations and design systems.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">📊</div>
+              <div class="skill-name">CRO &amp; Analytics</div>
+              <div class="skill-desc">
+                GA4, Hotjar, A/B testing, heatmaps and funnel optimization.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🔗</div>
+              <div class="skill-name">App Integration</div>
+              <div class="skill-desc">
+                Klaviyo, ReCharge, Yotpo, Gorgias, Judge.me, and 50+ apps.
+              </div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">🚀</div>
+              <div class="skill-name">Performance</div>
+              <div class="skill-desc">
+                Core Web Vitals, lazy loading, critical CSS, image optimization.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="container">
+          <div class="projects-header">
+            <div class="section-tag">Portfolio</div>
+            <h2 class="section-title">Selected Projects</h2>
+            <p class="section-sub">
+              A selection of Shopify stores built from scratch or significantly
+              improved. Update with your own projects.
+            </p>
+          </div>
+          <div class="projects-grid">
+            <div class="project-card featured">
+              <div class="project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80&fit=crop"
+                  alt="Fashion store"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="p-tag">Theme Dev</span
+                  ><span class="p-tag">Speed Optimization</span
+                  ><span class="p-tag">CRO</span>
+                </div>
+                <div class="project-title">StyleHaus — Fashion Store</div>
+                <div class="project-desc">
+                  Custom Shopify theme built from scratch for a premium fashion
+                  brand. Implemented dynamic filtering, wishlist, size guides,
+                  and a fully custom cart drawer. Achieved sub-2s load time and
+                  a 42% boost in conversion rate.
+                </div>
+                <div class="project-metrics">
+                  <div class="metric">
+                    <div class="metric-val">+42%</div>
+                    <div class="metric-label">Conversion Rate</div>
+                  </div>
+                  <div class="metric">
+                    <div class="metric-val">1.8s</div>
+                    <div class="metric-label">Load Time</div>
+                  </div>
+                  <div class="metric">
+                    <div class="metric-val">98</div>
+                    <div class="metric-label">PageSpeed Score</div>
+                  </div>
+                </div>
+                <a class="project-link" href="#contact"
+                  >View Case Study
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=700&q=80&fit=crop"
+                  alt="Beauty store"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="p-tag">Custom Sections</span
+                  ><span class="p-tag">Subscriptions</span>
+                </div>
+                <div class="project-title">GlowLab — Beauty Brand</div>
+                <div class="project-desc">
+                  Custom product bundler, subscription flow with ReCharge, and a
+                  quiz-based skin-match tool. Increased AOV by 35%.
+                </div>
+                <div class="project-metrics">
+                  <div class="metric">
+                    <div class="metric-val">+35%</div>
+                    <div class="metric-label">Avg. Order Value</div>
+                  </div>
+                </div>
+                <a class="project-link" href="#contact"
+                  >Learn More
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-img">
+                <img
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80&fit=crop"
+                  alt="Home decor store"
+                />
+              </div>
+              <div class="project-body">
+                <div class="project-tags">
+                  <span class="p-tag">Migration</span
+                  ><span class="p-tag">Headless</span>
+                </div>
+                <div class="project-title">NestCo — Home &amp; Decor</div>
+                <div class="project-desc">
+                  Migrated 12,000+ products from WooCommerce to Shopify Plus.
+                  Custom Hydrogen storefront with 3D product viewer and room
+                  visualizer.
+                </div>
+                <div class="project-metrics">
+                  <div class="metric">
+                    <div class="metric-val">12K+</div>
+                    <div class="metric-label">Products Migrated</div>
+                  </div>
+                </div>
+                <a class="project-link" href="#contact"
+                  >Learn More
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="container">
+          <div class="services-header">
+            <div class="section-tag">What I Do</div>
+            <h2 class="section-title">Services</h2>
+            <p class="section-sub">
+              End-to-end Shopify development — from initial setup to advanced
+              custom features and ongoing optimization.
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">🏪</div>
+              <div class="service-name">Store Setup &amp; Theme Dev</div>
+              <div class="service-desc">
+                Full Shopify store setup or custom theme development built for
+                your brand and optimized for sales.
+              </div>
+              <ul class="service-list">
+                <li>Theme customization &amp; development</li>
+                <li>Custom section builder</li>
+                <li>OS 2.0 theme migration</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">📄</div>
+              <div class="service-name">Landing &amp; Product Pages</div>
+              <div class="service-desc">
+                High-converting landing pages and product pages designed to
+                maximize your ROAS and reduce bounce.
+              </div>
+              <ul class="service-list">
+                <li>Custom product page templates</li>
+                <li>Sales landing pages</li>
+                <li>Bundle &amp; upsell layouts</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">⚡</div>
+              <div class="service-name">Speed &amp; CRO</div>
+              <div class="service-desc">
+                Diagnose and fix performance bottlenecks. Improve Core Web
+                Vitals and test for higher conversions.
+              </div>
+              <ul class="service-list">
+                <li>PageSpeed optimization</li>
+                <li>Core Web Vitals fix</li>
+                <li>A/B testing setup</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔧</div>
+              <div class="service-name">App Integration</div>
+              <div class="service-desc">
+                Seamlessly integrate third-party apps without breaking
+                performance or design consistency.
+              </div>
+              <ul class="service-list">
+                <li>Klaviyo, Yotpo, Gorgias</li>
+                <li>Subscriptions &amp; loyalty</li>
+                <li>Custom app development</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔄</div>
+              <div class="service-name">Platform Migration</div>
+              <div class="service-desc">
+                Migrate from WooCommerce, BigCommerce, Wix or Magento to Shopify
+                — zero data loss guaranteed.
+              </div>
+              <ul class="service-list">
+                <li>Product &amp; customer data</li>
+                <li>SEO URL redirects</li>
+                <li>Order history transfer</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🛠️</div>
+              <div class="service-name">Custom Features</div>
+              <div class="service-desc">
+                Need something that doesn't exist? I build custom Liquid,
+                JavaScript, and app-based features from scratch.
+              </div>
+              <ul class="service-list">
+                <li>Custom cart &amp; checkout</li>
+                <li>Product configurators</li>
+                <li>Loyalty &amp; referral systems</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials">
+        <div class="container">
+          <div class="testimonials-header">
+            <div class="section-tag">Client Reviews</div>
+            <h2 class="section-title">What clients say</h2>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testi-card">
+              <div class="testi-stars">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <p class="testi-text">
+                "Rejaul completely transformed our store. Our load time dropped
+                from 6s to under 2s, and our conversion rate nearly doubled. He
+                knows Shopify inside out."
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80&fit=crop&crop=face"
+                    alt="Client"
+                  />
+                </div>
+                <div>
+                  <div class="testi-name">James Mitchell</div>
+                  <div class="testi-role">Founder, StyleHaus</div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <p class="testi-text">
+                "The subscription flow Rejaul built for us has been a
+                game-changer. Clean code, great communication, and delivered
+                ahead of schedule. Highly recommend!"
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80&fit=crop&crop=face"
+                    alt="Client"
+                  />
+                </div>
+                <div>
+                  <div class="testi-name">Sarah Chen</div>
+                  <div class="testi-role">CEO, GlowLab Beauty</div>
+                </div>
+              </div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <p class="testi-text">
+                "Our WooCommerce migration to Shopify went flawlessly. 12,000+
+                products, no data loss, SEO preserved. Rejaul is the real deal
+                for complex Shopify work."
+              </p>
+              <div class="testi-author">
+                <div class="testi-avatar">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&crop=face"
+                    alt="Client"
+                  />
+                </div>
+                <div>
+                  <div class="testi-name">Daniel Osei</div>
+                  <div class="testi-role">Director, NestCo Decor</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="section-tag">Get In Touch</div>
+              <h2 class="section-title">
+                Let's build something great together
+              </h2>
+              <p>
+                Ready to take your Shopify store to the next level? I'm
+                available for new projects. Send me a message and I'll get back
+                to you within 24 hours.
+              </p>
+              <div class="contact-items">
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="ci-label">Email</div>
+                    <div class="ci-value">
+                      <a href="mail-to:rejaulkarim.devs@gmail.com"
+                        >rejaulkarim.devs@gmail.com</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="ci-label">Location</div>
+                    <div class="ci-value">Available Worldwide · Remote</div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect x="2" y="7" width="20" height="14" rx="2" />
+                      <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="ci-label">Upwork</div>
+                    <div class="ci-value">
+                      upwork.com/freelancers/rejaulkarim
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="ci-icon">
+                    <svg
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="ci-label">GitHub</div>
+                    <div class="ci-value">github.com/rejaulkarim</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <form class="contact-form" id="contactForm">
+                <!-- Web3Forms access key — replace YOUR_ACCESS_KEY with the key from web3forms.com -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+                <input type="hidden" name="subject" value="New Project Inquiry — Portfolio" />
+                <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+                <input type="checkbox" name="botcheck" style="display:none" />
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">First Name</label>
+                    <input class="form-input" type="text" name="first_name" placeholder="John" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">Last Name</label>
+                    <input class="form-input" type="text" name="last_name" placeholder="Doe" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email</label>
+                  <input class="form-input" type="email" name="email" placeholder="john@company.com" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Service Needed</label>
+                  <select class="form-select" name="service" required>
+                    <option value="">Select a service…</option>
+                    <option>Store Setup &amp; Theme Development</option>
+                    <option>Custom Sections / Features</option>
+                    <option>Landing / Product Page</option>
+                    <option>Speed Optimization</option>
+                    <option>App Integration</option>
+                    <option>Platform Migration</option>
+                    <option>Ongoing Support</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-textarea" name="message" placeholder="Tell me about your project, timeline, and budget…" required></textarea>
+                </div>
+                <button class="form-submit" type="submit" id="formSubmitBtn">
+                  Send Message →
+                </button>
+                <div id="formStatus" class="form-status"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-logo">RK<span>.</span></div>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="footer-socials">
+            <a class="social-btn" href="#" title="LinkedIn"
+              ><svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a class="social-btn" href="#" title="GitHub"
+              ><svg
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"
+                />
+              </svg>
+            </a>
+            <a class="social-btn" href="#" title="Upwork"
+              ><svg fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H8.227v7.104c-.002 1.405-1.141 2.543-2.547 2.543-1.405 0-2.543-1.138-2.543-2.543V3.492H.595v7.104c0 2.914 2.37 5.303 5.285 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">
+            © 2025 Rejaul Karim. All rights reserved.
+          </div>
+          <a class="resume-btn" href="#" download>
+            <svg
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+              />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
