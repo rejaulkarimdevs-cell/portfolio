@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rejaul Karim — Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background: #f4f4f5;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 40px 20px;
+      }
+
+      .page {
+        background: #fff;
+        width: 794px;
+        min-height: 1123px;
+        padding: 52px 56px;
+        box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      }
+
+      /* HEADER */
+      .r-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-bottom: 24px;
+        border-bottom: 2px solid #18181b;
+        margin-bottom: 28px;
+      }
+      .r-name {
+        font-size: 34px;
+        font-weight: 700;
+        color: #18181b;
+        letter-spacing: -1px;
+        line-height: 1.1;
+      }
+      .r-name span { color: #22c55e; }
+      .r-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #52525b;
+        margin-top: 6px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+      .r-contact {
+        text-align: right;
+        font-size: 13px;
+        color: #52525b;
+        line-height: 1.9;
+      }
+      .r-contact a { color: #22c55e; text-decoration: none; }
+
+      /* SECTIONS */
+      .r-section { margin-bottom: 24px; }
+      .r-section-title {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #22c55e;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e4e4e7;
+      }
+
+      /* SUMMARY */
+      .r-summary {
+        font-size: 14px;
+        color: #3f3f46;
+        line-height: 1.7;
+      }
+
+      /* SKILLS */
+      .r-skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .r-skill {
+        background: #f4f4f5;
+        border-radius: 6px;
+        padding: 7px 12px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #18181b;
+      }
+
+      /* EXPERIENCE */
+      .r-exp-item { margin-bottom: 18px; }
+      .r-exp-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+      .r-exp-role {
+        font-size: 15px;
+        font-weight: 600;
+        color: #18181b;
+      }
+      .r-exp-date {
+        font-size: 12px;
+        color: #71717a;
+        font-weight: 500;
+      }
+      .r-exp-company {
+        font-size: 13px;
+        color: #22c55e;
+        font-weight: 500;
+        margin-bottom: 6px;
+      }
+      .r-exp-list {
+        list-style: none;
+        padding: 0;
+      }
+      .r-exp-list li {
+        font-size: 13px;
+        color: #3f3f46;
+        line-height: 1.6;
+        padding-left: 14px;
+        position: relative;
+        margin-bottom: 3px;
+      }
+      .r-exp-list li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #22c55e;
+        font-size: 11px;
+      }
+
+      /* SERVICES TWO COL */
+      .r-two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 24px;
+      }
+      .r-two-col li {
+        font-size: 13px;
+        color: #3f3f46;
+        line-height: 1.6;
+        padding-left: 14px;
+        position: relative;
+        list-style: none;
+      }
+      .r-two-col li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #22c55e;
+        font-size: 11px;
+      }
+
+      /* STATS */
+      .r-stats {
+        display: flex;
+        gap: 32px;
+      }
+      .r-stat-val {
+        font-size: 22px;
+        font-weight: 700;
+        color: #18181b;
+        line-height: 1;
+      }
+      .r-stat-val span { color: #22c55e; }
+      .r-stat-label {
+        font-size: 12px;
+        color: #71717a;
+        margin-top: 3px;
+      }
+
+      /* PRINT BUTTON */
+      .print-bar {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        display: flex;
+        gap: 10px;
+        z-index: 99;
+      }
+      .print-btn {
+        background: #22c55e;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(34,197,94,0.3);
+      }
+      .back-btn {
+        background: #18181b;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      /* PRINT STYLES */
+      @media print {
+        body { background: #fff; padding: 0; }
+        .page { box-shadow: none; padding: 32px 40px; }
+        .print-bar { display: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+
+      <!-- HEADER -->
+      <div class="r-header">
+        <div>
+          <div class="r-name">Rejaul <span>Karim</span></div>
+          <div class="r-title">Shopify Expert &amp; Ecommerce Developer</div>
+        </div>
+        <div class="r-contact">
+          <div><a href="mailto:rejaulkarim.devs@gmail.com">rejaulkarim.devs@gmail.com</a></div>
+          <div>Available Worldwide · Remote</div>
+          <div><a href="https://rejaulkarimdevs-cell.github.io/portfolio">rejaulkarimdevs-cell.github.io/portfolio</a></div>
+          <div>github.com/rejaulkarim · upwork.com/fl/rejaulkarim</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="r-section">
+        <div class="r-section-title">Professional Summary</div>
+        <p class="r-summary">
+          Dedicated Shopify developer with 2.5+ years of hands-on experience building high-performance ecommerce stores.
+          Specialized in Liquid templating, custom theme development, Headless/Hydrogen storefronts, and conversion rate
+          optimization. Consistently delivered measurable results — including sub-2s load times and 40%+ conversion
+          improvements — for clients across fashion, beauty, and home decor industries.
+        </p>
+      </div>
+
+      <!-- STATS -->
+      <div class="r-section">
+        <div class="r-section-title">Key Metrics</div>
+        <div class="r-stats">
+          <div>
+            <div class="r-stat-val">2.5<span>+</span></div>
+            <div class="r-stat-label">Years Experience</div>
+          </div>
+          <div>
+            <div class="r-stat-val">98<span>%</span></div>
+            <div class="r-stat-label">Client Satisfaction</div>
+          </div>
+          <div>
+            <div class="r-stat-val">+40<span>%</span></div>
+            <div class="r-stat-label">Avg. Conversion Lift</div>
+          </div>
+          <div>
+            <div class="r-stat-val">12K<span>+</span></div>
+            <div class="r-stat-label">Products Migrated</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="r-section">
+        <div class="r-section-title">Technical Skills</div>
+        <div class="r-skills-grid">
+          <div class="r-skill">Shopify / Shopify Plus</div>
+          <div class="r-skill">Liquid Templating</div>
+          <div class="r-skill">Hydrogen / Remix</div>
+          <div class="r-skill">JavaScript / React</div>
+          <div class="r-skill">CSS / Tailwind CSS</div>
+          <div class="r-skill">Storefront API</div>
+          <div class="r-skill">Theme OS 2.0</div>
+          <div class="r-skill">Core Web Vitals</div>
+          <div class="r-skill">GA4 / Hotjar / A/B Testing</div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="r-section">
+        <div class="r-section-title">Selected Projects</div>
+
+        <div class="r-exp-item">
+          <div class="r-exp-top">
+            <div class="r-exp-role">StyleHaus — Fashion Store</div>
+            <div class="r-exp-date">Theme Dev · Speed · CRO</div>
+          </div>
+          <div class="r-exp-company">Custom Shopify Theme from Scratch</div>
+          <ul class="r-exp-list">
+            <li>Built dynamic filtering, wishlist, size guides, and custom cart drawer</li>
+            <li>Achieved sub-2s load time and 98 PageSpeed score</li>
+            <li>Delivered +42% conversion rate improvement</li>
+          </ul>
+        </div>
+
+        <div class="r-exp-item">
+          <div class="r-exp-top">
+            <div class="r-exp-role">GlowLab — Beauty Brand</div>
+            <div class="r-exp-date">Custom Sections · Subscriptions</div>
+          </div>
+          <div class="r-exp-company">ReCharge Subscription Flow &amp; Product Bundler</div>
+          <ul class="r-exp-list">
+            <li>Built quiz-based skin-match tool and custom product bundler</li>
+            <li>Integrated ReCharge subscription flow increasing AOV by +35%</li>
+          </ul>
+        </div>
+
+        <div class="r-exp-item">
+          <div class="r-exp-top">
+            <div class="r-exp-role">NestCo — Home &amp; Decor</div>
+            <div class="r-exp-date">Migration · Headless</div>
+          </div>
+          <div class="r-exp-company">WooCommerce → Shopify Plus Migration</div>
+          <ul class="r-exp-list">
+            <li>Migrated 12,000+ products with zero data loss and full SEO preservation</li>
+            <li>Built custom Hydrogen storefront with 3D product viewer</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="r-section">
+        <div class="r-section-title">Services Offered</div>
+        <ul class="r-two-col">
+          <li>Store Setup &amp; Theme Development</li>
+          <li>Speed Optimization &amp; Core Web Vitals</li>
+          <li>Custom Sections &amp; Features</li>
+          <li>App Integration (Klaviyo, Yotpo, ReCharge)</li>
+          <li>Landing &amp; Product Page Design</li>
+          <li>Platform Migration to Shopify</li>
+          <li>Headless / Hydrogen Storefront</li>
+          <li>Ongoing Support &amp; Maintenance</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="print-bar">
+      <a class="back-btn" href="index.html">← Back</a>
+      <button class="print-btn" onclick="window.print()">Download PDF</button>
+    </div>
+
+    <script>
+      // Auto-trigger print if opened from download button
+      if (document.referrer.includes('index.html') || sessionStorage.getItem('printResume')) {
+        sessionStorage.removeItem('printResume');
+      }
+    </script>
+  </body>
+</html>
