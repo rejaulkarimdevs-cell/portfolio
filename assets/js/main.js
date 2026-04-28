@@ -59,13 +59,13 @@ if (contactForm) {
     status.className = "form-status";
     status.textContent = "";
 
-    const data = Object.fromEntries(new FormData(contactForm));
+    const formData = new FormData(contactForm);
+    formData.append("access_key", "9972a272-7894-4871-9c5a-625b57d82297");
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(data),
+        body: formData,
       });
       const json = await res.json();
       if (json.success) {
