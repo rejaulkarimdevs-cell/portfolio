@@ -107,6 +107,21 @@ nav {
 .nav-cta:hover {
   opacity: 0.85;
 }
+.nav-mobile-cta {
+  display: none;
+  background: var(--green);
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.nav-mobile-cta:hover {
+  opacity: 0.85;
+}
 
 /* HAMBURGER */
 .nav-hamburger {
@@ -856,6 +871,13 @@ h2.section-title {
   font-weight: 500;
   color: var(--ink);
 }
+.ci-value a {
+  color: var(--green);
+  text-decoration: none;
+}
+.ci-value a:hover {
+  text-decoration: underline;
+}
 .contact-form {
   background: var(--bg-warm);
   border: 1px solid var(--border);
@@ -1395,7 +1417,7 @@ footer {
   font-weight: 500;
   padding: 6px 14px;
   border-radius: 100px;
-  margin-top: 10px;
+  margin-top: 16px;
   margin-bottom: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
@@ -1522,19 +1544,22 @@ footer {
   color: #fff;
   font-size: 13px;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 0 16px;
   border-radius: 8px;
   text-decoration: none;
   align-self: flex-start;
+  height: 0;
+  overflow: hidden;
   opacity: 0;
-  transform: translateY(8px);
   transition:
-    opacity 0.25s,
-    transform 0.25s;
+    height 0.25s ease,
+    padding 0.25s ease,
+    opacity 0.2s ease;
 }
 .pf-card:hover .pf-live-btn {
+  height: 36px;
+  padding: 8px 16px;
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* MERGED RESULTS — stats row inside dark section */
@@ -1547,16 +1572,26 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-inner {
-    padding: 0 20px;
+    padding: 0 16px;
+    justify-content: space-between;
   }
   .nav-links {
     display: none;
   }
-  .desktop-only {
-    display: none !important;
-  }
   .nav-hamburger {
     display: flex;
+    order: -1;
+  }
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-cta {
+    display: none !important;
+  }
+  .nav-mobile-cta {
+    display: inline-flex !important;
   }
   section {
     padding: 48px 20px;
@@ -1652,5 +1687,53 @@ footer {
   }
   .pf-img {
     aspect-ratio: 3 / 4;
+  }
+}
+@media (max-width: 575px) {
+  .hero-float-badge {
+    display: none;
+  }
+  .services-header {
+    margin-bottom: 40px;
+  }
+  .hero-social-proof {
+    font-size: 12px;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 475px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .contact-form {
+    padding: 24px 20px;
+  }
+  .service-card,
+  .testi-card {
+    padding: 20px;
+  }
+  .result-metric {
+    padding: 24px 16px;
+  }
+  .btn-text-desktop {
+    display: none;
+  }
+  .btn-text-mobile {
+    display: inline;
+  }
+}
+@media (min-width: 476px) {
+  .btn-text-mobile {
+    display: none;
   }
 }
