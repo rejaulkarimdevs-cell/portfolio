@@ -35,7 +35,7 @@ const sectionObserver = new IntersectionObserver(
       if (entry.isIntersecting) setActiveLink(entry.target.id);
     });
   },
-  { threshold: 0.3, rootMargin: "-80px 0px -40% 0px" },
+  { threshold: 0, rootMargin: "-80px 0px -50% 0px" },
 );
 sections.forEach((s) => sectionObserver.observe(s));
 
@@ -85,8 +85,23 @@ if (contactForm) {
   });
 }
 
-// Scroll reveal
+// Portfolio filter
+const pfBtns = document.querySelectorAll(".pf-btn");
+const pfCards = document.querySelectorAll(".pf-card");
 
+pfBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    pfBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const filter = btn.dataset.filter;
+    pfCards.forEach((card) => {
+      const show = filter === "all" || card.dataset.category === filter;
+      card.style.display = show ? "" : "none";
+    });
+  });
+});
+
+// Scroll reveal
 const obs = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
@@ -99,7 +114,7 @@ const obs = new IntersectionObserver(
   { threshold: 0.1 },
 );
 document
-  .querySelectorAll(".skill-card,.project-card,.service-card,.testi-card")
+  .querySelectorAll(".service-card,.testi-card,.result-metric,.about-bullet,.stat-bar-item,.pf-card")
   .forEach((el) => {
     el.style.opacity = "0";
     el.style.transform = "translateY(20px)";
